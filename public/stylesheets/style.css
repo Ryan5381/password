@@ -1,0 +1,78 @@
+.navbar {
+  justify-content: center;
+  margin-top: 2rem;
+  color: darkslategray;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#container {
+  display: grid; justify-content: center;
+  align-items: center;
+}
+
+.password-length {
+  
+  margin-left: 20px;
+}
+
+.exclude-characters {
+  margin-left: 20px;
+}
+
+button {
+  height: 50px;
+}
+
+.password-result {
+  margin: 1rem;
+  padding: 0.8rem;
+  border: solid rgb(143, 143, 143) 1px;
+  color: dimgray;
+  width: 300px;
+}
+
+.mix {
+  display: flex;
+}
+
+.password-display{
+  /* background-color: chartreuse; */
+  font-size: 20px;
+  color: red;
+  font-weight: bold;
+  padding: 0.5rem;
+}
+
+@media screen and (min-width: 1000px) {
+  .container {
+    width: 80%; /* 可以设置容器宽度为屏幕宽度的90% */
+    display: grid;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 440px ) {
+  /* .container {
+    display: grid;
+    justify-content: center;
+  } */
+
+  h2{
+    font-size: 20px;
+  }
+
+  .mix {
+  display: block;
+}
+.btn-submit{
+  text-align: center;
+  margin: 0 auto;
+}
+
+button{
+  height: 35px;
+  
+}
+}
+

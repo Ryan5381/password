@@ -13,3 +13,7 @@ app.get("/", (req, res) => res.redirect("/generator"));
 app.get("/generator", (req, res) => res.render("index"));
 
 app.listen(port, () => console.log("啟動伺服器: http://localhost:3000"));
+
+
+
+

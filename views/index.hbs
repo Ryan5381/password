@@ -1,23 +1,90 @@
-<h2>hello</h2>
 <form>
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input
-      type="email"
-      class="form-control"
-      id="exampleInputEmail1"
-      aria-describedby="emailHelp"
-    />
-    <div id="emailHelp" class="form-text">We'll never share your email with
-      anyone else.</div>
+  <div class="container" id="container">
+
+    <div class="mb-3 mt-5 password-length">
+      <div style="display: flex">
+        <label for="passwordLength" class="form-label">Password Length</label>
+        <input
+          type="number"
+          class="form-control"
+          id="passwordLength"
+          aria-describedby="passwordLength"
+          style="width: 100px; height:30px; margin-left: 1rem"
+          min="4"
+          max="16"
+          value="{{inputValue.value}}"
+          required
+        />
+      </div>
+      <div class="form-text">( Length is available between 4 ~ 16 )</div>
+    </div>
+
+    <hr style="margin-bottom: 2rem;" />
+
+    <div class="mb-3 form-check">
+      <input type="checkbox" id="Lowercase-check" class="check-lowercase" />
+      <label
+        for="Lowercase-check"
+        class="form-label"
+        style="margin-left: 0.5rem;"
+      >Include Lowercase Char</label>
+      <span class="form-text" style="margin-left: 1rem;">(e.g. abcdefg)</span>
+    </div>
+
+    <div class="mb-3 form-check">
+      <input type="checkbox" id="uppercase-check" class="check-uppercase" />
+      <label
+        for="uppercase-check"
+        class="form-label"
+        style="margin-left: 0.5rem;"
+      >Include Uppercase Char</label>
+      <span class="form-text" style="margin-left: 1rem;">(e.g. ABCDEFG)</span>
+    </div>
+
+    <div class="mb-3 form-check">
+      <input type="checkbox" id="number-check" class="check-number" />
+      <label
+        for="number-check"
+        class="form-label"
+        style="margin-left: 0.5rem;"
+      >Include Numbers</label>
+      <span class="form-text" style="margin-left: 1rem;">(e.g. 123456)</span>
+    </div>
+
+    <div class="mb-3 form-check">
+      <input type="checkbox" id="symbol-check" class="check-symbols" />
+      <label
+        for="symbol-check"
+        class="form-label"
+        style="margin-left: 0.5rem;"
+      >Include Symbols</label>
+      <span class="form-text" style="margin-left: 1rem;">(e.g. @#$%)</span>
+    </div>
+
+    <div class="mb-3">
+      <label for="text" class="form-label exclude-characters">Exclude Characters</label>
+      <input
+        type="text"
+        id="input-text"
+        name="text"
+        minlength="4"
+        size="10"
+        class="form-control"
+        style="width: 100px; display: inline-block; margin-left: 0.5rem;"
+      />
+      <div class="form-text" style="margin-left: 1rem;">( These will not appear
+        in the password )</div>
+    </div>
+
+    <div class="mix">
+      <div class="btn-submit">
+        <button type="submit" class="btn btn-success mt-3">Submit</button>
+      </div>
+      <div class="password-result">Your Password :
+        <span class="password-display"></span>
+      </div>
+    </div>
+
   </div>
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" />
-  </div>
-  <div class="mb-3 form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+
 </form>
